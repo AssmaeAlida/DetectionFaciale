@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contentPane" prefHeight="228.0" prefWidth="169.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InterfaceListeEmpController">
+   <children>
+      <Pane prefHeight="615.0" prefWidth="1147.0">
+         <children>
+            <Label layoutX="46.0" layoutY="14.0" text="Liste des employés" textFill="#011424">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Pane fx:id="btn_create" layoutX="72.0" layoutY="110.0" onDragDetected="#AjouterEmploye" prefHeight="474.0" prefWidth="1021.0" style="-fx-background-color: #dbf8ff; -fx-background-radius: 20px;">
+               <children>
+                  <TableView fx:id="Table" layoutX="16.0" layoutY="14.0" onSort="#ListeEmp" prefHeight="446.0" prefWidth="983.0" style="-fx-background-radius: 15px; -fx-background-color: white; -fx-border-color: #011424;">
+                    <columns>
+                      <TableColumn fx:id="col_nom" prefWidth="100.79995727539062" text="nom" />
+                      <TableColumn fx:id="col_prenom" prefWidth="122.40000915527344" text="prenom" />
+                        <TableColumn fx:id="col_DateNaissance" prefWidth="118.4000244140625" text="DateNaissance" />
+                        <TableColumn fx:id="col_departement" prefWidth="140.0" text="departement" />
+                        <TableColumn fx:id="col_email" prefWidth="140.0" text="email" />
+                        <TableColumn fx:id="col_telephone" prefWidth="128.0" text="telephone" />
+                        <TableColumn fx:id="col_fonction" prefWidth="139.20001220703125" text="fonction" />
+                        <TableColumn fx:id="col_action" prefWidth="99.99993896484375" text="Action" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <ImageView fx:id="btn_return" fitHeight="41.0" fitWidth="42.0" layoutX="1007.0" layoutY="25.0" onDragDetected="#back">
+               <image>
+                  <Image url="@../../../../Downloads/2031484%20(1).png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="Date" layoutX="517.0" layoutY="62.0" onAction="#TrierParDate" prefHeight="25.0" prefWidth="229.0" promptText="Selectionner une date..." />
+            <TextField fx:id="txt_chercher" layoutX="230.0" layoutY="62.0" onAction="#Search" prefHeight="25.0" prefWidth="229.0" promptText="Chercher..." />
+            <Label layoutX="107.0" layoutY="66.0" prefHeight="17.0" prefWidth="108.0" text="Chercher par nom" textFill="#011424" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

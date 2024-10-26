@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contentPane" prefHeight="228.0" prefWidth="169.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashoboardAdminController">
+   <children>
+      <Pane prefHeight="615.0" prefWidth="1147.0">
+         <children>
+            <Label layoutX="58.0" layoutY="16.0" text="Hi Admin !" textFill="#011424">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Pane fx:id="btn_create" layoutX="118.0" layoutY="116.0" onDragDetected="#AjouterEmploye" prefHeight="441.0" prefWidth="418.0" style="-fx-background-color: #dbf8ff; -fx-background-radius: 20px;">
+               <children>
+                  <Label layoutX="93.0" layoutY="270.0" text="Ajouter un nouveau Employé" textFill="#011526">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="303.0" text="Ajouter un nouveau employé en modifiant les tous " textFill="#c1bcbc" />
+                  <Label layoutX="157.0" layoutY="321.0" text="plus petits détails" textFill="#c1bcbc" />
+                  <Pane layoutX="157.0" layoutY="156.0" prefHeight="103.0" prefWidth="104.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="88.0" layoutX="8.0" layoutY="9.0">
+                           <image>
+                              <Image url="@../../../../Downloads/3658756.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1062.0" layoutY="21.0">
+               <image>
+                  <Image url="@../../../../Downloads/10894988-avatar-homme-personne-visage-icone-illustrationle-personnage-principal-dessin-anime-portrait-humain-profil-avatar-utilisateur-homme-isole-blanc-personnage-d-icone-clipart-visage-humain-silhouette-adulte-eleme.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_return" fitHeight="41.0" fitWidth="42.0" layoutX="1007.0" layoutY="25.0" onDragDetected="#back">
+               <image>
+                  <Image url="@../../../../Downloads/2031484%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="70.0" text="Soyez Bienvenue chez MyScan" textFill="#9c9797" />
+            <Pane fx:id="btn_liste" layoutX="631.0" layoutY="110.0" onDragDetected="#AfficherListe" prefHeight="441.0" prefWidth="418.0" style="-fx-background-color: #dbf8ff; -fx-background-radius: 20px;">
+               <children>
+                  <Label layoutX="140.0" layoutY="271.0" text="Liste des employés" textFill="#011526">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="303.0" text="Vous pouvez consulter la liste des employés" textFill="#c1bcbc" />
+                  <Label layoutX="84.0" layoutY="321.0" prefHeight="18.0" prefWidth="262.0" text="en modifiant les tous plus petits détails" textFill="#c1bcbc" />
+                  <ImageView fitHeight="103.0" fitWidth="104.0" layoutX="163.0" layoutY="154.0">
+                     <image>
+                        <Image url="@../../../../Downloads/list-2389219_1280.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
